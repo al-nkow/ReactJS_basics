@@ -1,6 +1,5 @@
 import React from "react";
 
-
 export class Footer extends React.Component {
     render() {
         console.log('PROPS', this.props);
@@ -16,7 +15,9 @@ export class Footer extends React.Component {
                         {this.props.user.perms.map( (perm, index) => <li key={index}>{perm}</li> )}
                     </ul>
                 </div>
+                <hr/>
                 {this.props.children}
+                <hr/>
             </div>
         );
     }

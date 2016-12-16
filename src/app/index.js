@@ -4,6 +4,8 @@ import { render } from "react-dom";
 import { Header } from "./components/Header.js"
 import { Home } from "./components/Home.js"
 import { Footer } from "./components/Footer.js"
+import { Myblock } from "./components/Myblock.js"
+import { MyStatelessComponent } from "./components/MyStatelessComponent.js"
 
 class App extends React.Component {
     render() {
@@ -14,6 +16,18 @@ class App extends React.Component {
         };
         return (
             <div className="yourclass">
+
+                <div className="section">
+                    <MyStatelessComponent homeLink="Home"/>
+                </div>
+
+                <br/>
+                <hr/>
+                <br/>
+
+                <div className="section">
+                    <Myblock name={"Vasya"} initialAge={25}/>
+                </div>
                 <h1>Hello</h1>
                 <div className="section">
                     <Header/>
