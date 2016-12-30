@@ -41,6 +41,7 @@ export class Myblock extends React.Component {
                 <br/><br/>
                 <button onClick={this.onMakeOlder.bind(this)}>Make you older!</button>
                 <br/><br/>
+                <button onClick={this.props.greet}>Greet (from parent component)</button>
                 <hr/>
                 <hr/>
             </div>
@@ -51,5 +52,6 @@ export class Myblock extends React.Component {
 // хорошая практика явно указывать типы props
 Myblock.propTypes = {
     name: React.PropTypes.string,
-    initialAge: React.PropTypes.number
+    initialAge: React.PropTypes.number,
+    greet: React.PropTypes.func
 };
